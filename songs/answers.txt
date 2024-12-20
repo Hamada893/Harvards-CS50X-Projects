@@ -1,0 +1,19 @@
+Characterizing the listener's aura :
+
+- Energy: if the energy is high it might indicate the listener enjoys this song and might repeat it
+
+- Valence: higher valence equals more positive emotions which if we take into account the next type of characterization "danceabaility" could bump the song even higher in the listener's favorites
+
+- Danceability: higher danceability could result in the listener enjoying the song even more and thus liking it
+
+Potential FLaws:
+
+- Narrow number of songs - only 100 - thus might not capture what the listener likes overall
+
+- If the user went through emotional instability or a "phase" it could skew all of the data
+
+How to make it better:
+
+- Include more than 100 songs
+
+- Personalize over time not only in one specific year - in this case 2018 - like Spotify does
