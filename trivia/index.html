@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Link to Montserrat font and external CSS stylesheet -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+
+        <script>
+            function checkMultipleChoice(answer) {
+
+                const correctAnswer = "button3";
+
+
+                const buttons = document.querySelectorAll(".mc-button");
+
+
+                buttons.forEach(button => button.style.backgroundColor = "#d9edff");
+
+
+                if (answer === correctAnswer) {
+
+                    document.getElementById("mc-feedback").textContent = "Correct!";
+                    document.getElementById(answer).style.backgroundColor = "green";
+                } else {
+
+                    document.getElementById("mc-feedback").textContent = "Incorrect";
+                    document.getElementById(answer).style.backgroundColor = "red";
+                }
+            }
+
+
+            function checkFreeResponse() {
+
+                const userAnswer = document.getElementById("free-response-input").value.trim().toLowerCase();
+
+
+                const correctAnswer = "paris";
+
+
+                const responseField = document.getElementById("free-response-input");
+
+                // Check if the user's answer matches the correct answer
+                if (userAnswer === correctAnswer) {
+
+                    document.getElementById("fr-feedback").textContent = "Correct!";
+                    responseField.style.backgroundColor = "green";
+                } else {
+
+                    document.getElementById("fr-feedback").textContent = "Incorrect";
+                    responseField.style.backgroundColor = "red";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+
+                <h3>What is the capital of France?</h3>
+
+                <button id="button1" class="mc-button" onclick="checkMultipleChoice('button1')">Berlin</button>
+                <button id="button2" class="mc-button" onclick="checkMultipleChoice('button2')">Madrid</button>
+                <button id="button3" class="mc-button" onclick="checkMultipleChoice('button3')">Paris</button>
+
+                <p id="mc-feedback"></p>
+            </div>
+
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>What is the capital of France?</h3>
+
+                <input type="text" id="free-response-input">
+
+                <button onclick="checkFreeResponse()">Submit</button>
+
+                <p id="fr-feedback"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
