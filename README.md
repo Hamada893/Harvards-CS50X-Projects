@@ -4,6 +4,9 @@ A collection of all my foundational CS50 projects.
 
 This repository contains all the problem sets I have completed as part of the Harvard CS50x course. Each problem set is stored in its own folder and includes all the necessary files and documentation.
 
+## Certificate
+![CS50X: CS50's introduction to Computer Science](HarvardX.png)
+
 ## Problem Sets:
 
   
